@@ -1,0 +1,15 @@
+<%- include('layout/header') %>
+
+<div>
+    <h1>Welcome <%= user ? user.username : 'Guest' %>
+    </h1>
+    <% if (user) { %>
+        <a href="/logout">Logout</a>
+        <% } else { %>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+            <% } %>
+</div>
+
+
+<%- include('layout/footer') %>
